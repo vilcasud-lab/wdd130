@@ -10,6 +10,7 @@
 header {
     background-color: #ffffff;
     color: var(--accent1-color);
+    border-bottom: 3px solid var(--accent2-color);
 }
 
 * {
@@ -46,6 +47,10 @@ article {
     padding: 8px;
 }
 
+nav a:hover {
+    color: var(--secondary-color);
+}
+
 .socialmedia a {
     text-decoration: none;
 }
@@ -65,10 +70,24 @@ article {
     height: auto;
 }
 
+.hero article {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    background-color: rgba(38, 70, 83, 0.75);
+    color: #ffffff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 h1 {
     position: absolute;
     top: 20px;
-    width: 100%;
+    right: 0;
+    left: 0;
     padding: 16px;
     text-align: center;
     opacity: 0.7;
