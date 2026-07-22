@@ -9,15 +9,32 @@
     box-sizing: border-box;
 }
 
+a {
+    color: rgb(3, 3, 116);
+}
+
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: steelblue;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
-    color: white;
     display: block;
-    padding: 20px;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
 }
 
 h1 {
@@ -25,44 +42,49 @@ h1 {
 }
 
 main img {
-    width: 150px;
+    width: 300px;
     height: var(--height-ima);
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
-    /* Here move... */
     float: right;
+    margin: 1rem 0 1rem 1rem;
 }
 
 p {
-    padding: 0;
+    padding: 1rem 0;
+}
+
+footer {
+    background-color: #3e3e3e;
+    color: #fff;
+    padding: 2rem 1rem;
 }
 
 main {
-    max-width: 840px;
+    max-width: 640px;
+    grid-column: 2/3;
+    margin: 1rem 0;
 }
 
 aside {
-    width: 20em;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 0.2);
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
-    text-align: var(--text-align);
+    max-width: 30rem;
+    margin: 10px 0;
     position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 aside img {
-    width: 200px;
+    width: 100%;
     height: var(--height-ima);
 }
 
 aside h2 {
     position: absolute;
-    left: 150px;
+    top: 30px;
+    left: 50%;
     transform: translateX(-50%);
-    top: 47px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
 }
 
 footer {
@@ -71,11 +93,24 @@ footer {
     text-align: var(--text-align)
 }
 
+ul {
+    list-style: none;
+    padding: 1rem;
+}
+
 /* Class selector */
 .box {
-    margin: 1rem;
     border: 1px solid rgb(0 0 / 10%);
     padding: 1rem;
     background-color: #ddd;
     color: #000;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
